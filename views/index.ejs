@@ -6,14 +6,25 @@
   <!-- Main Navigation -->
   <%- include partials/main_nav.ejs %>
   <!-- Main Section -->
-  <main class="container">
-    <div class="p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <h1>Welcome to the <%= title %> page!</h1>
-        <button class="btn btn-primary btn-lg" type="button">Continue ..</button>
+  <section class="bg-light pb-5 pt-5 text-secondary" data-pg-collapsed>
+    <div class="container pb-5 pt-5">
+      <div class="align-items-center gx-lg-5 gy-5 row">
+        <div class="col-lg-6 order-lg-last">
+          <img src="https://images.unsplash.com/photo-1629053800620-4584e836b3bc?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDI1fHxncmF5JTIwYWJzdHJhY3R8ZW58MHx8fHwxNjM4MTI1NDcy&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=600&h=600&fit=crop" class="img-fluid w-100"/>
+        </div>
+        <div class="col-lg-6">
+          <p class="h3 text-primary text-uppercase">SOFTWARE DEVELOPER <span class="text-secondary">>>></span> <br/>  WEB
+            DEVELOPER
+            <span class="text-secondary">>>></span> <br/>
+            SOFTWARE ARCHITECT <span class="text-secondary">>>></span></p>
+          <h1 class="display-3 fw-bold mb-3 text-dark">Olusegun Sofola</h1>
+          <p class="lead mb-4 pe-sm-5">My mission is to help you design the most effective, secure, error-free and
+            efficient computer software for your organization. <br/> Plain and Simple.</p>
+          <a href="/about" class="btn btn-primary pb-2 pe-4 ps-4 pt-2">About Me.</a>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
   <!-- Footer Section -->
   <%- include partials/footer.ejs %>
   <!-- Scripts Section -->
