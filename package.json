@@ -1,6 +1,6 @@
 {
   "name": "expressdev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node server"
@@ -23,7 +23,6 @@
   },
   "description": "base express dev for COMP229",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ssofola/comp229_1.git"

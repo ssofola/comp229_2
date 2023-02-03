@@ -1,3 +1,10 @@
+/*****************************************
+ //    File Name: app.js
+ // Student Name: Olusegun Sofola
+ //   Student ID: 301254272
+ //         Date: February 3, 2023
+ *****************************************/
+// create required objects
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');

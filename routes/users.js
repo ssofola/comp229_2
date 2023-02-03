@@ -1,5 +1,12 @@
-var express = require('express');
-var router = express.Router();
+/*****************************************
+ //    File Name: user.js
+ // Student Name: Olusegun Sofola
+ //   Student ID: 301254272
+ //         Date: February 3, 2023
+ *****************************************/
+// create required objects
+let express = require('express');
+let router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

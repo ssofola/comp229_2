@@ -1,9 +1,14 @@
 #!/usr/bin/env node
-
+/*****************************************
+ //    File Name: server.js
+ // Student Name: Olusegun Sofola
+ //   Student ID: 301254272
+ //         Date: February 3, 2023
+ *****************************************/
 /**
  * Module dependencies.
  */
-
+// create required objects
 let app = require('./app');
 let debug = require('debug')('expressdev:server');
 let http = require('http');
