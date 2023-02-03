@@ -63,18 +63,21 @@
             </div>
             <div class="col-lg-6 ms-auto py-3">
                 <div class="bg-white p-4 p-lg-5 shadow">
-                    <h2 class="fw-bold h4 mb-4 text-uppercase">Send Us A message</h2>
-                    <form>
+                    <h2 class="fw-bold h4 mb-4 text-uppercase">Send me a message</h2>
+                    <form id="sendEmail" action="/home" onsubmit="sendEmail()">
                         <div class="mb-3">
-                            <input type="text" class="form-control rounded-0" placeholder="Enter name..."/>
+                            <input type="text" name="fullname" class="form-control rounded-0" placeholder="Enter your full name..."/>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control rounded-0" placeholder="Enter email..."/>
+                            <input type="email" name="email" class="form-control rounded-0" placeholder="Enter your email..."/>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control rounded-0" rows="6" placeholder="Enter your message..."></textarea>
+                            <input type="cell" name="cellnumber" class="form-control rounded-0" placeholder="Enter your cell number..."/>
                         </div>
-                        <button type="submit" class="btn d-block w-100 btn-primary rounded-0 text-uppercase">Submit</button>
+                        <div class="mb-3">
+                            <textarea class="form-control rounded-0" name="message" rows="6" placeholder="Enter your message..."></textarea>
+                        </div>
+                        <<button type="submit" class="btn d-block w-100 btn-primary rounded-0 text-uppercase">Submit</button>
                     </form>
                 </div>
             </div>
@@ -85,5 +88,10 @@
 <%- include partials/footer.ejs %>
 <!-- Scripts Section -->
 <%- include partials/scripts.ejs %>
+<script>
+    function sendEmail(){
+       alert('Email Sent');
+    }
+</script>
 </body>
 </html>
