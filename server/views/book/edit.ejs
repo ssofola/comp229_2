@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<!-- Page Header -->
+<%- include ../partials/header.ejs %>
+<body>
+<!-- Main Navigation -->
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Section -->
+<section class="bg-light pb-5 pt-5" data-pg-collapsed>
+    <div class="container pb-5 pt-5">
+        <div class="bg-white p-4 p-lg-5">
+            <h2 class="mb-4"><%= title %></h2>
+            <form method="post">
+                <div class="mb-3">
+                    <input type="hidden" name="id" value="<%= book.id %>">
+                    <label class="form-label" for="txtTitle">Title</label>
+                    <input type="text" class="form-control rounded-0" id="txtTitle" name="name" value="<%= book.name %>" placeholder="Enter book name or title ..."/>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="txtAuthor">Author</label>
+                        <input type="text" class="form-control rounded-0" id="txtAuthor" name="author" value="<%= book.author %>"  placeholder="Enter author's name ..."/>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="form-label" for="txtPrice">Price</label>
+                        <input type="number" class="form-control rounded-0" id="txtPrice" name="price"  value="<%= book.price %>" placeholder="Enter book price ..."/>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="form-label" for="txtPublished">Publish Date</label>
+                        <input type="text" class="form-control rounded-0" id="txtPublished" name="published" value="<%= book.published %>" placeholder="Enter publish date ..."/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtAreaDesc">Description</label>
+                    <textarea class="form-control rounded-0" rows="5" id="txtAreaDesc" name="description" placeholder="Enter your book summary..."><%= book.description.trim() %></textarea>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-pen-to-square"></i> Submit</button>
+                    <a href="/book-list" class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i> Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<%- include ../partials/footer.ejs %>
+<!-- Scripts Section -->
+<%- include ../partials/scripts.ejs %>
+</body>
+</html>

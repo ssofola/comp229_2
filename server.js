@@ -9,7 +9,7 @@
  * Module dependencies.
  */
 // create required objects
-let app = require('./config/app');
+let app = require('./server/config/app');
 let debug = require('debug')('expressdev:server');
 let http = require('http');
 
