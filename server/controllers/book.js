@@ -9,13 +9,13 @@ module.exports.getBookList = function (req,res,next){
         if(err){
             return console.log(err);
         } else {
-            res.render('book/list',{title:'Book List', BookList: bookList});
+            res.render('book/list',{title:'Book List', BookList: bookList, displayName: req.user ? req.user.displayName : ''});
         }
     });
 }
 
 module.exports.getAddBookPage = function (req, res, next){
-    res.render('book/add',{title:'Add Book'});
+    res.render('book/add',{title:'Add Book', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.addNewBook = function (req,res,next){
@@ -44,7 +44,7 @@ module.exports.getEditBookPage = function (req,res,next) {
             res.end(err);
         } else {
             // show the edit view
-            res.render('book/edit',{title:'Edit Book', book: bookToEdit});
+            res.render('book/edit',{title:'Edit Book', book: bookToEdit, displayName: req.user ? req.user.displayName : ''});
         }
     });
 }

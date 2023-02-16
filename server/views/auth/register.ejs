@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<!-- Page Header -->
+<%- include ../partials/header.ejs %>
+<body>
+<!-- Main Navigation -->
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Section -->
+<section class="bg-light pb-5 pt-5" data-pg-collapsed>
+    <div class="container pb-5 pt-5" data-pg-collapsed>
+        <div class="bg-white p-4 p-lg-5">
+            <h2 class="mb-4">Register</h2>
+            <!-- Message Area -->
+            <% if(messages.length > 0){ %>
+                <div class="alert alert-danger">
+                    <%= messages %>
+                </div>
+            <% } %>
+            <form method="post">
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="inputUserName">Username</label>
+                        <input type="text" class="form-control rounded-0" id="inputUserName" placeholder="Enter username..." name="username"/>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="inputPassword">Password</label>
+                        <input type="password" class="form-control rounded-0" id="inputPassword" placeholder="Enter email..." name="password"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="inputEmail">Email</label>
+                        <input type="email" class="form-control rounded-0" id="inputEmail" placeholder="Enter email..." name="email"/>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="inputDisplayName">Display Name</label>
+                        <input type="text" class="form-control rounded-0" id="inputDisplayName" placeholder="Enter Display Name.." name="displayName"/>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Register</button>&nbsp;
+                        <a href="/"><input type="button" class="btn btn-warning" value="Cancel"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<%- include ../partials/footer.ejs %>
+<!-- Scripts Section -->
+<%- include ../partials/scripts.ejs %>
+</body>
+</html>

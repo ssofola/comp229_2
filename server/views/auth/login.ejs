@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<!-- Page Header -->
+<%- include ../partials/header.ejs %>
+<body>
+<!-- Main Navigation -->
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Section -->
+<section class="bg-light pb-5 pt-5" data-pg-collapsed>
+    <div class="container pb-5 pt-5" data-pg-collapsed>
+        <div class="col-md-9 col-xl-8 ms-auto me-auto">
+            <div class="bg-white p-4 p-lg-5">
+                <h2 class="mb-1 text-dark">Please Login</h2>
+                <p class="mb-4" data-pg-collapsed>Use this awesome form to sign in users.</p>
+                <!-- Message Area -->
+                <% if(messages.length > 0){ %>
+                    <div class="alert alert-danger">
+                        <%= messages %>
+                    </div>
+                <% } %>
+                <form method="post" autocomplete="off">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="bg-light input-group-text" id="addon-wrapping1">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em">
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                            <input type="username" name="username" class="form-control" placeholder="Enter User Name" aria-label="User Email" aria-describedby="addon-wrapping1"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="bg-light input-group-text" id="addon-wrapping2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em">
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path d="M10.758 11.828l7.849-7.849 1.414 1.414-1.414 1.415 2.474 2.474-1.414 1.415-2.475-2.475-1.414 1.414 2.121 2.121-1.414 1.415-2.121-2.122-2.192 2.192a5.002 5.002 0 0 1-7.708 6.294 5 5 0 0 1 6.294-7.708zm-.637 6.293A3 3 0 1 0 5.88 13.88a3 3 0 0 0 4.242 4.242z"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" aria-label="Password" aria-describedby="addon-wrapping2"/>
+                            &nbsp;<a href="/register"><input type="button" class="btn btn-primary" value="Register Here"></a>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <button type="submit" class="btn btn-primary">Login</button>&nbsp;
+                            <a href="/"><input type="button" class="btn btn-warning" value="Cancel"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<%- include ../partials/footer.ejs %>
+<!-- Scripts Section -->
+<%- include ../partials/scripts.ejs %>
+</body>
+</html>
