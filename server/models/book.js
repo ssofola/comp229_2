@@ -1,3 +1,10 @@
+/*****************************************
+ //    File Name: book.js
+ // Student Name: Olusegun Sofola
+ //  Description: book data model
+ //   Student ID: 301254272
+ //         Date: February 3, 2023
+ *****************************************/
 let mongoose = require('mongoose');
 
 // create the books model class

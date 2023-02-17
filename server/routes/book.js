@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-// get the book controller
+// get the bizContact controller
 let bookController = require('../controllers/book');
 
 // helper guard function

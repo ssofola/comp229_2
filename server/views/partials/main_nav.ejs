@@ -1,3 +1,4 @@
+<!-- Main Navigation Partial Page -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
@@ -38,6 +39,13 @@
                     <%}%>
                 </li>
                 <li class="nav-item">
+                    <% if(title == "Contact Me"){%>
+                        <a class="nav-link active" href="/contact"><i class="fa-solid fa-address-book"></i> Contact Me</a>
+                    <%} else {%>
+                        <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i> Contact Me</a>
+                    <%}%>
+                </li>
+                <li class="nav-item">
                     <% if(title == "Book List"){%>
                         <a class="nav-link active" href="/book-list"><i class="fa-solid fa-book"></i> Books</a>
                     <%} else {%>
@@ -45,10 +53,10 @@
                     <%}%>
                 </li>
                 <li class="nav-item">
-                    <% if(title == "Contact Me"){%>
-                        <a class="nav-link active" href="/contact"><i class="fa-solid fa-address-book"></i> Contact Me</a>
+                    <% if(title == "Business Contact List"){%>
+                        <a class="nav-link active" href="/biz-contact-list"><i class="fa-solid fa-address-card"></i> Business Contacts</a>
                     <%} else {%>
-                        <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i> Contact Me</a>
+                        <a class="nav-link" href="/biz-contact-list"><i class="fa-solid fa-address-card"></i> Business Contacts</a>
                     <%}%>
                 </li>
                 <% if(typeof displayName == 'string' && displayName) { %>

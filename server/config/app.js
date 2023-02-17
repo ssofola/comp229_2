@@ -1,6 +1,7 @@
 /*****************************************
  //    File Name: app.js
  // Student Name: Olusegun Sofola
+ // Description: application's server side configuration file
  //   Student ID: 301254272
  //         Date: February 3, 2023
  *****************************************/
@@ -35,6 +36,7 @@ mongoDB.once('open', () =>{
 let indexRouter = require('../routes');
 let usersRouter = require('../routes/users');
 let booksRouter = require('../routes/book');
+let bizContactsRouter = require('../routes/biz_contact');
 
 let app = express();
 
@@ -80,6 +82,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/book-list', booksRouter);
+app.use('/biz-contact-list', bizContactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

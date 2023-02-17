@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<!-- Page Header -->
+<%- include ../partials/header.ejs %>
+<body>
+<!-- Main Navigation -->
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Section -->
+<section class="bg-light pb-5 pt-5" data-pg-collapsed>
+    <div class="container pb-5 pt-5">
+        <div class="bg-white p-4 p-lg-5">
+            <h2 class="mb-4"><%= title %></h2>
+            <form method="post">
+                <div class="mb-3">
+                    <input type="hidden" name="id" value="<%= bizContact.id %>">
+                    <label class="form-label" for="txtTitle">Contact Name</label>
+                    <input type="text" class="form-control rounded-0" id="txtTitle" name="contact_name" value="<%= bizContact.contact_name %>" placeholder="Enter bizContact name or title ..."/>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="txtAuthor">Contact Number</label>
+                        <input type="text" class="form-control rounded-0" id="txtAuthor" name="contact_number" value="<%= bizContact.contact_number %>"  placeholder="Enter author's name ..."/>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="txtPrice">Email</label>
+                        <input type="text" class="form-control rounded-0" id="txtPrice" name="email"  value="<%= bizContact.email %>" placeholder="Enter bizContact price ..."/>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-pen-to-square"></i> Submit</button>
+                    <a href="/biz-contact-list" class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i> Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<%- include ../partials/footer.ejs %>
+<!-- Scripts Section -->
+<%- include ../partials/scripts.ejs %>
+</body>
+</html>

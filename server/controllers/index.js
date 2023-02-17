@@ -1,3 +1,10 @@
+/*****************************************
+ //    File Name: index.js
+ // Student Name: Olusegun Sofola
+ //  Description: index controller file
+ //   Student ID: 301254272
+ //         Date: February 3, 2023
+ *****************************************/
 let express = require('express');
 let mongoose = require('mongoose');
 let passport = require('passport');
@@ -52,7 +59,7 @@ module.exports.processLoginPage = function(req, res, next) {
             if(err){
                 return next(err);
             }
-            return res.redirect('/book-list');
+            return res.redirect('/biz-contact-list');
         })
     })(req,res,next)
 }

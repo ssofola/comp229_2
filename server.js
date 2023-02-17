@@ -2,6 +2,7 @@
 /*****************************************
  //    File Name: server.js
  // Student Name: Olusegun Sofola
+ // Description: application's server side nodejs server
  //   Student ID: 301254272
  //         Date: February 3, 2023
  *****************************************/
