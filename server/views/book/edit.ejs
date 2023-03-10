@@ -11,8 +11,8 @@
         <div class="bg-white p-4 p-lg-5">
             <h2 class="mb-4"><%= title %></h2>
             <form method="post">
+                <input type="hidden" name="id" value="<%= book.id %>">
                 <div class="mb-3">
-                    <input type="hidden" name="id" value="<%= book.id %>">
                     <label class="form-label" for="txtTitle">Title</label>
                     <input type="text" class="form-control rounded-0" id="txtTitle" name="name" value="<%= book.name %>" placeholder="Enter bizContact name or title ..."/>
                 </div>

@@ -38,6 +38,7 @@ let usersRouter = require('../routes/users');
 let booksRouter = require('../routes/book');
 let bizContactsRouter = require('../routes/biz_contact');
 
+// get the app object
 let app = express();
 
 // view engine setup
@@ -76,7 +77,6 @@ passport.use(User.createStrategy());
 // serialize and deserialize the User Info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
 
 // define the routers and link them to their
 app.use('/', indexRouter);
