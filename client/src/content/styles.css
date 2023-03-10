@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+/*****************************************
+//    File Name: styles.css
+//    Description: application's cascading style sheet file
+// Student Name: Olusegun Sofola
+//   Student ID: 301254272
+//         Date: March 10, 2023
+****************************************/
+/* Color definition for the page footer */
+footer nav div h6 {
+  color: lightgray;
+}
